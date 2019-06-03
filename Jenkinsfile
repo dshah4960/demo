@@ -26,8 +26,8 @@ pipeline {
         }
         stage('Build') {
             steps {
-                echo 'Execute build'
-                sh 'ansible-playbook compile_mvn.yml -e "module=demo" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
+                echo 'Dockerize'
+                sh 'ansible-playbook dockerize.yml -e "module=demo" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
             }
         }
         stage('Deploy') {
