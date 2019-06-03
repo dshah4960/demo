@@ -27,7 +27,7 @@ pipeline {
         stage('Clone') {
             steps {
                 echo 'Dockerize'
-                sh 'ansible-playbook gitclone.yml -e "giturl=demo.git" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
+                sh 'ansible-playbook gitclone.yml -e "giturl=dshah4960/demo.git" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
             }
         }
         stage('Build') {
