@@ -1,3 +1,4 @@
+oc login
 oc import-image hello-world:linux --from=docker.io/hello-world:linux --confirm
-
+oc new-app demo/<image-name>:<tag> --name=<tag>
 
