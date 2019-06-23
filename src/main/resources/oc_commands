@@ -1,0 +1,3 @@
+oc import-image hello-world:linux --from=docker.io/hello-world:linux --confirm
+
+
