@@ -1,4 +1,3 @@
-oc login
+oc login https://api.pro-eu-west-1.openshift.com --token=VhyC_L2XKSaCWELiAWusNTrAEKku3vEd8Fj57O7i77c
 oc import-image hello-world:linux --from=docker.io/hello-world:linux --confirm
 oc new-app demo/<image-name>:<tag> --name=<tag>
-
