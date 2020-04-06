@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploy on cloud'
-                sh 'ansible-playbook deploy_docker.yml -e "image_stream=demo" -e "image_name=dshah4960/ideathon:demo" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
+                sh 'ansible-playbook deploy_docker.yml -e "build_name=demo:latest" -e "image_stream=demo" -e "image_stream=dshah4960/ideathon:latest" -e "ansible_become_method=enable" -e "ansible_become_user=root" -e "ansible_become_password=darshil"'
             }
         }
     }
